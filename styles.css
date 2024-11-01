@@ -1,0 +1,854 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Easy Theming */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6C757D;
+    --background-color: #F8F9FA;
+    --text-color: #343A40;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    /* Aligns items vertically in the center */
+    justify-content: space-between;
+    /* Distributes space evenly between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo,
+.iitr-logo {
+    width: 120px;
+    /* Adjust logo sizes */
+    cursor: pointer;
+}
+
+.lab-name {
+    font-size: 3em;
+    cursor: pointer;
+    color: #fff;
+    flex-grow: 1;
+    /* Allows the lab name to take up extra space in the center */
+    text-align: center;
+}
+
+.header-full-form {
+    font-size: 2em;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* Navigation Menu */
+/* General Navigation Styles */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.sticky-nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.sticky-nav .nav-links a:hover {
+    color: #007bff;
+}
+
+/* Mobile Navigation */
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Overlay for mobile navigation */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Mobile Sidebar */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -200px; /* Start off-screen */
+        height: 100%;
+        width: 200px;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: right 0.3s ease; /* Slide-in effect */
+    }
+
+    .nav-links.show {
+        right: 0; /* Slide-in when menu is open */
+    }
+
+    .nav-overlay.show {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+/* Slideshow Section */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    /* Adjust to desired width */
+    height: 550px;
+    /* Adjust to desired height */
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image fills container while maintaining aspect ratio */
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: #fff;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+
+/* Research Team Section */
+.research-team {
+    padding: 30px 20px;
+    /* Reduced padding */
+    background-color: #f9f9f9;
+}
+
+.research-team h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    /* Reduced margin below title */
+    font-size: 1.8em;
+    /* Slightly reduced font size */
+    color: var(--primary-color);
+}
+
+/* Professor Profile */
+.professor-profile {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px auto;
+    /* Centered and margin below */
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    /* Limit width for better readability */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.professor-profile:hover {
+    transform: scale(1.02);
+    /* Subtle scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.professor-profile img {
+    width: 120px;
+    /* Consistent image size */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.professor-profile h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.professor-profile p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.research-team .social-icons {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.research-team .social-icons a {
+    display: inline-block;
+}
+
+.research-team .icon {
+    width: 18px;
+    /* Further reduced size for better proportion */
+    height: 18px;
+    transition: transform 0.3s;
+}
+
+.research-team .icon:hover {
+    transform: scale(1.2);
+}
+
+/* Team Members */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    /* Reduced gap between team members */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    flex: 1 1 calc(25% - 40px);
+    max-width: 300px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+
+
+.team-member .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    /* Reduced gap between icons */
+    margin-top: 8px;
+    /* Reduced top margin */
+}
+
+.team-member .social-icons a {
+    display: inline-block;
+}
+
+.team-member .icon {
+    width: 18px;
+    /* Further reduced size for better proportion */
+    height: 18px;
+    transition: transform 0.3s;
+}
+
+.team-member .icon:hover {
+    transform: scale(1.2);
+}
+
+/* Projects Section */
+.projects {
+    padding: 30px 20px;
+    /* Reduced padding */
+    background-color: var(--background-color);
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    /* Reduced margin below title */
+    font-size: 1.8em;
+    /* Slightly reduced font size */
+    color: var(--primary-color);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* Reduced gap between projects */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 15px;
+    /* Reduced padding */
+    border-radius: 10px;
+    width: 260px;
+    /* Adjusted width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    margin-bottom: 8px;
+    /* Reduced margin below project titles */
+    color: var(--primary-color);
+}
+
+.project-item p {
+    color: var(--text-color);
+    font-size: 0.95em;
+    /* Slightly reduced font size */
+}
+
+
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Publications Section */
+/* Publications Section */
+.publication-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.publication-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.publication-item {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    height: 320px;
+    /* Set initial height */
+    position: relative;
+}
+
+/* Style for the image */
+.publication-item img {
+    width: 100%;
+    height: 150px;
+    /* Fixed height for images */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Style for the publication title */
+.publication-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 5;
+    /* Standard property for line clamping */
+
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+    padding: 0 10px;
+    white-space: normal;
+    transition: all 0.3s ease;
+}
+
+/* Remove underlining from links */
+.publication-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hover effect to expand all items in the row */
+.publication-row:hover .publication-item {
+    height: 360px;
+    /* Set max height for expansion on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    /* Slightly scales up the item */
+}
+
+.publication-row:hover .publication-title {
+    display: -webkit-box;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: unset;
+    /* Standard property for line clamping */
+
+    overflow: visible;
+}
+
+
+/* Notification Section */
+.notifications {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.notifications h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.notification-container {
+    height: 300px;
+    /* Fixed height for scrolling area */
+    overflow: hidden;
+    position: relative;
+}
+
+.notification-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    animation: scroll-up 15s linear infinite;
+    /* Adjusted to start faster */
+}
+
+.notification-item {
+    font-size: 1em;
+    color: #000;
+    padding: 15px 0;
+    /* Adds space between each notification */
+    text-align: left;
+    padding-left: 15px;
+    white-space: normal;
+    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on individual notification */
+.notification-item:hover {
+    font-size: 1.1em;
+    /* Slightly larger font size on hover */
+    color: #007bff;
+    /* Change text color to black */
+}
+
+.notification-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.notification-item a:hover {
+    text-decoration: none;
+    color: #007bff;
+    /* Change color to black */
+}
+
+/* Keyframe animation for continuous scrolling effect */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    5% {
+        transform: translateY(80%);
+    }
+
+    /* Faster initial speed */
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/* Gallery Section */
+.gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 1.8em;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery-item a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Scale image on hover */
+.gallery-item:hover a img {
+    transform: scale(1.05);
+    /* Adjust zoom level as needed */
+}
+
+/* Popup Styling */
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark overlay */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Show the popup on hover */
+.gallery-item:hover .popup {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Lab Logo and Tagline */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+}
+
+.lab-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.lab-tagline h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.lab-tagline p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Quick Links */
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #fff;
+    /* Default color white */
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    /* Change to blue on hover */
+}
+
+/* Contact Information */
+.footer-contact h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo,
+    .iitr-logo {
+        margin: 8px 0;
+        /* Reduced margin */
+    }
+
+    .lab-name {
+        font-size: 1.6em;
+        /* Further reduced font size */
+        margin: 0 10px;
+        /* Reduced margin */
+    }
+
+    .header-full-form {
+        font-size: 0.95em;
+        /* Slightly reduced font size */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .slideshow-container {
+        max-width: 90%;
+        margin: 20px auto;
+        /* Reduced margin */
+    }
+
+    .research-team .professor-profile {
+        max-width: 90%;
+        /* Adjusted for smaller screens */
+    }
+
+    .team-container,
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member,
+    .professor-profile,
+    .project-item {
+        width: 90%;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
+        /* Further reduced gap */
+    }
+}

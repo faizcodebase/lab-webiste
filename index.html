@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDRA LAB - Intelligent Networks for Data-driven Road Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts (Optional for Enhanced Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <!-- Header Section -->
+    <header>
+        <div class="header-top" id="header-top">
+            <img src="./images/logo.png" alt="INDRA LAB Logo" class="logo" id="refresh-home" href="#home">
+            <h1 class="lab-name" href="#home">INDRA LAB</h1>
+            <img src="./images/iitrlogo.png" alt="IIT Roorkee Logo" class="iitr-logo">
+        </div>
+        <div class="header-full-form">
+            Intelligent Networks for Data-driven Road Analytics
+        </div>
+    </header>
+
+
+    <!-- Navigation Menu -->
+    <nav class="sticky-nav">
+        <div class="menu-icon" onclick="toggleMobileNav()">☰</div>
+        <div class="nav-overlay" onclick="toggleMobileNav()"></div> <!-- Overlay to close the menu on click -->
+        <ul class="nav-links">
+            <li><a href="#header-top" onclick="toggleMobileNav()">Home</a></li>
+            <li><a href="#research-team" onclick="toggleMobileNav()">Research Team</a></li>
+            <li><a href="#projects" onclick="toggleMobileNav()">Projects</a></li>
+            <li><a href="#publications" onclick="toggleMobileNav()">Publications</a></li>
+            <li><a href="#gallery" onclick="toggleMobileNav()">Gallery</a></li>
+            <li><a href="#contact" onclick="toggleMobileNav()">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <!-- Slideshow Section -->
+    <section class="slideshow-container" id="home">
+        <div class="slideshow">
+            <img class="slide active" src="./images/frame1.jpeg" alt="Frame 1">
+            <img class="slide" src="./images/frame2.jpeg" alt="Frame 2">
+            <img class="slide" src="./images/frame3.jpeg" alt="Frame 3">
+            <img class="slide" src="./images/frame4.jpeg" alt="Frame 4">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Notification Section -->
+    <section class="notifications" style="text-align: center; margin-bottom: 20px; margin-top: 40px;">
+        <h2>Notifications</h2>
+        <div class="notification-container">
+            <div class="notification-wrapper">
+                <div class="notification-item">
+                    <!-- href="link-to-paper-1" target="_blank" -->
+                    <a>
+                        8 papers accepted for presentation at TRB Meeting, USA, 2025.
+                    </a>
+                </div>
+                <div class="notification-item">
+                    <a>
+                        Suvam Banerjee's paper accepted in the Journal of Transport Geography on 21 Oct 2024.
+                    </a>
+                </div>
+                <div class="notification-item">
+                    <a>
+                        Abhijnan Maji's paper selected for publication in the Canadian Journal of Civil Engineering on
+                        30 Oct 2024.
+                    </a>
+                </div>
+                <!-- Repeat notifications if needed to create a continuous scroll -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Research Team Section -->
+    <section class="research-team" id="research-team">
+        <h2 style="margin-top: 10px;">Research Team</h2>
+        <!-- Professor Profile -->
+        <div class="professor-profile" style="text-align: center;">
+            <img src="./images/IG.png" alt="Prof. Indrajit Ghosh" style="border-radius: 100%; width: 120px;">
+            <h3 style="color: #007bff;">Prof. Indrajit Ghosh</h3>
+            <p>Professor at the Department of Civil Engineering, IIT Roorkee<br>
+                Joint Faculty at the MFSDSAI, IIT Roorkee</p>
+            <p style="text-align: left; margin-left: 5px;"><strong>Areas of Interest:</strong></p>
+            <ul style="list-style-type: disc; text-align: left; display: inline-block; margin-top: -10px;">
+                <li>Road safety evaluations using Traffic Conflict Technique</li>
+                <li>ML/DL in road safety and cyber-physical systems</li>
+                <li>Evacuation strategies for natural disasters</li>
+                <li>Influence of Traffic Control Devices on road user behavior</li>
+            </ul>
+            <div class="social-icons" style="margin-top: 20px;">
+                <a href="mailto:indrajit.ghosh@ce.iitr.ac.in" aria-label="Email Professor">
+                    <img src="./images/mailicon.svg" alt="Email Icon" class="icon" style="width: 24px;">
+                </a>
+                <a href="https://www.linkedin.com/in/indrajit-ghosh" target="_blank" aria-label="LinkedIn Professor">
+                    <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon"
+                        style="width: 24px; margin-left: 10px;">
+                </a>
+                <a href="https://scholar.google.com/citations?user=PmRjsdUAAAAJ&hl=en" target="_blank"
+                    aria-label="Google Scholar Profile">
+                    <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                        style="width: 24px; margin-left: 10px;">
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Team Members -->
+        <div class="team-container">
+            <div class="team-member">
+                <img src="./images/Anurag.jpg" alt="Anurag">
+                <h3>Anurag Thombre</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a href="mailto:athombre@ce.iitr.ac.in" aria-label="Email Anurag">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anurag-thombre" target="_blank" aria-label="LinkedIn Anurag">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=OI42DAoAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/Suvam.jpg" alt="Suvam">
+                <h3>Suvam Banerjee</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a href="mailto:sbanerjee@ce.iitr.ac.in" aria-label="Email Suvam">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/suvam-banerjee-855026159" target="_blank"
+                        aria-label="LinkedIn Suvam">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Suvam-Banerjee-3" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/Kali.png" alt="Kali">
+                <h3>Kaliprasana Muduli </h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a href="mailto:k_muduli@ce.iitr.ac.in" aria-label="Email Kali">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/kaliprasana" target="_blank" aria-label="LinkedIn Kali">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.co.in/citations?user=pBSNoXMAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+
+            </div>
+            <div class="team-member">
+                <img src="./images/Bhavna.jpg" alt="Bhavna">
+                <h3>Bhavna Katoch</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a aria-label="Email Bhavna">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/bhavna-katoch-1395a6213" target="_blank"
+                        aria-label="LinkedIn Bhavna">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=6IsCUfMAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="team-member">
+                <img src="./images/Abhijnan.jpg" alt="Abhijnan">
+                <h3>Abhijnan Maji</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a href="mailto:a_maji@ce.iitr.ac.in" aria-label="Email Abhijnan">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/abhijnan-maji-537857190" target="_blank"
+                        aria-label="LinkedIn Abhijnan">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Abhijnan-Maji" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="team-member">
+                <img src="./images/Prathyusha.jpg" alt="Prathyusha">
+                <h3>Prathyusha Kommoju</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a aria-label="Email Prathyusha">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/prathyusha-kommoju-045a11137" target="_blank"
+                        aria-label="LinkedIn Prathyusha">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=Jnk7-MQAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+
+            </div>
+            <div class="team-member">
+                <img src="./images/Avnish.png" alt="Avnish">
+                <h3>Avnish Panwar</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a href="mailto:avnish@example.com" aria-label="Email Avnish">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/avnish-panwar-53b82b104" target="_blank"
+                        aria-label="LinkedIn Avnish">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=f-Q2zhgAAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./images/avatar.png" alt="Shahzaib">
+                <h3>Shahzaib</h3>
+                <p style="margin-top: -10px;">PhD Scholar</p>
+                <div class="social-icons">
+                    <a>
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a>
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a>
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="./images/Faiz.png" alt="Faiz">
+                <h3>Faiz Ali</h3>
+                <p style="margin-top: -10px;">Project Associate</p>
+                <div class="social-icons">
+                    <a href="mailto:faiz.ce@sric.iitr.ac.in" aria-label="Email Faiz">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/alifaiz1213" target="_blank" aria-label="LinkedIn Faiz">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=M7O76T8AAAAJ&hl=en" target="_blank"
+                        aria-label="Google Scholar Profile">
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="./images/Divya.png" alt="Divya">
+                <h3>Divya Varshney</h3>
+                <p style="margin-top: -10px;">Project Associate</p>
+                <div class="social-icons">
+                    <a aria-label="Email Divya">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/divya-varshney-26586315b" target="_blank"
+                        aria-label="LinkedIn Divya">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a>
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="./images/Rakesh.jpg" alt="Rakesh">
+                <h3>Rakesh Kumar Lal</h3>
+                <p style="margin-top: -10px;">Project Associate</p>
+                <div class="social-icons">
+                    <a aria-label="Email Rakesh">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/rakesh-kumar-lal-ai" target="_blank"
+                        aria-label="LinkedIn Rakesh">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a>
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="./images/avatar.png" alt="Pranav">
+                <h3>Pranav Rajput</h3>
+                <p style="margin-top: -10px;">Project Assistant</p>
+                <div class="social-icons">
+                    <a aria-label="Email Pranav">
+                        <img src="./images/mailicon.svg" alt="Email Icon" class="icon">
+                    </a>
+                    <a target="_blank" aria-label="LinkedIn Pranav">
+                        <img src="./images/linkedInIcon.svg" alt="LinkedIn Icon" class="icon">
+                    </a>
+                    <a>
+                        <img src="./images/googleschIcon.png" alt="Google Scholar Icon" class="icon"
+                            style="width: 24px;">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 style="margin-top: 10px;">Research Projects</h2>
+        <div class="project-container">
+
+            <div class="project-item">
+                <h3>Data-driven Resilient Transportation Analytics accounting for Climate Change Impacts</h3>
+                <p><strong>Sponsor:</strong> SPARC, Ministry of Education<br>
+                    <strong>Sanctioned Year:</strong> 2024-25<br>
+                    <strong>Amount:</strong> ₹ 73.20 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Large Scale Evacuation Modeling in Urban Floods: A Demand-Supply Integration with Multiple Data
+                    Sources</h3>
+                <p><strong>Sponsor:</strong> SPARC, Ministry of Education<br>
+                    <strong>Sanctioned Year:</strong> 2024-25<br>
+                    <strong>Amount:</strong> ₹ 74.04 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Machine learning framework for the development of an interactive pedestrian crossing to enhance
+                    pedestrian safety</h3>
+                <p><strong>Sponsor:</strong> CRG, SERB<br>
+                    <strong>Sanctioned Year:</strong> 2023-24<br>
+                    <strong>Amount:</strong> ₹ 33.61 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Computer Vision for Automated Road Infrastructure Assessment: Enhancing Safety and Informed
+                    Decision-Making in Transportation</h3>
+                <p><strong>Sponsor:</strong> iHUB Data, IIIT Hyderabad<br>
+                    <strong>Sanctioned Year:</strong> 2023-24<br>
+                    <strong>Amount:</strong> ₹ 9.97 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Assessment and Improvement of Road Safety in School Zones</h3>
+                <p><strong>Sponsor:</strong> 3M India Pvt. Ltd., Bangalore<br>
+                    <strong>Sanctioned Year:</strong> 2023-24<br>
+                    <strong>Amount:</strong> ₹ 9.26 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Setting up a connected Simulator Set-up</h3>
+                <p><strong>Sponsor:</strong> SRIC IIT Roorkee<br>
+                    <strong>Sanctioned Year:</strong> 2022-23<br>
+                    <strong>Amount:</strong> ₹ 180.00 Lakhs<br>
+                    <strong>Role:</strong> Co-PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Deployment of T-CPS for Intelligent Mobility and Efficient Traffic Control in Smart Cities: A
+                    promising Future</h3>
+                <p><strong>Sponsor:</strong> iHUB, IIT, Roorkee<br>
+                    <strong>Sanctioned Year:</strong> 2021-22<br>
+                    <strong>Amount:</strong> ₹ 40.00 Lakhs<br>
+                    <strong>Role:</strong> Co-PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Intelligent Predictive and Prescriptive Systems for Traffic and Pavement Condition Management in a
+                    Smart City</h3>
+                <p><strong>Sponsor:</strong> iHUB Divya SamPark and Caritas India Pvt. Ltd.<br>
+                    <strong>Sanctioned Year:</strong> 2021-22<br>
+                    <strong>Amount:</strong> ₹ 80.00 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Effect of Countdown Display on Traffic Flow Characteristics and Driver Behaviour at Signalised
+                    Intersections</h3>
+                <p><strong>Sponsor:</strong> DST-SERB, Govt. of India<br>
+                    <strong>Sanctioned Year:</strong> 2013-14<br>
+                    <strong>Amount:</strong> ₹ 16.25 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h3>Development of Performance Parameters for Two-lane Roads under Mixed Traffic Condition</h3>
+                <p><strong>Sponsor:</strong> IIT Roorkee<br>
+                    <strong>Sanctioned Year:</strong> 2013-14<br>
+                    <strong>Amount:</strong> ₹ 9.97 Lakhs<br>
+                    <strong>Role:</strong> PI
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="publications" id="publications">
+        <h2 style="text-align: center; margin-top: 20px; margin-bottom: 20px; color: #007bff;">Research Work</h2>
+        <div class="buttons-container" style="text-align: center; margin-bottom: 20px;">
+            <a href="https://scholar.google.com/citations?user=PmRjsdUAAAAJ&hl=en" target="_blank"
+                class="button">Publications</a>
+            <a href="./thesis.pdf" target="_blank" class="button">Thesis</a>
+        </div>
+    </section>
+
+    <!-- Latest Publications Section -->
+    <section class="publications">
+        <h2 style="text-align: center; margin-bottom: 20px; margin-top: 40px; color: #007bff;">Latest Publications</h2>
+
+        <div class="publication-grid">
+
+            <!-- Row 1 -->
+            <div class="publication-row">
+                <div class="publication-item">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0925753524002510" target="_blank">
+                        <img src="./images/publication1.jpg" alt="Publication 1 Image">
+                        <p class="publication-title"
+                            title="A systematic review on roundabout safety incorporating the safety assessment methodologies, data collection techniques, and driver behavior">
+                            A systematic review on roundabout safety incorporating the safety assessment methodologies,
+                            data collection techniques, and driver behavior
+                        </p>
+                    </a>
+                </div>
+
+                <div class="publication-item">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2212420924005582" target="_blank">
+                        <img src="./images/publication2.jpg" alt="Publication 2 Image">
+                        <p class="publication-title"
+                            title="Evacuation planning for tourists: Lessons from cyclone Fani (2019), India">
+                            Evacuation planning for tourists: Lessons from cyclone Fani (2019), India
+                        </p>
+                    </a>
+                </div>
+
+                <div class="publication-item">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/15389588.2024.2404713#d1e233" target="_blank">
+                        <img src="./images/publication3.jpg" alt="Publication 3 Image">
+                        <p class="publication-title"
+                            title="Predicting pedestrian-vehicle interaction severity at unsignalized intersections">
+                            Predicting pedestrian-vehicle interaction severity at unsignalized intersections
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional rows can be added similarly -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <div class="gallery-item">
+                <a href="./images/gallery1.jpeg" target="_blank">
+                    <img src="./images/gallery1.jpeg" alt="Gallery Image 1">
+                    <div class="popup">Conference</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery2.jpeg" target="_blank">
+                    <img src="./images/gallery2.jpeg" alt="Gallery Image 2">
+                    <div class="popup"></div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery3.jpeg" target="_blank">
+                    <img src="./images/gallery3.jpeg" alt="Gallery Image 3">
+                    <div class="popup">Product Launching iRAMA</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery4.jpeg" target="_blank">
+                    <img src="./images/gallery4.jpeg" alt="Gallery Image 4">
+                    <div class="popup">Product Launching iRAMA</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery5.jpeg" target="_blank">
+                    <img src="./images/gallery5.jpeg" alt="Gallery Image 5">
+                    <div class="popup">Poster Presentation on Research Day at IIT Roorkee</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery6.jpeg" target="_blank">
+                    <img src="./images/gallery6.jpeg" alt="Gallery Image 6">
+                    <div class="popup">Showcasing Device iRAMA</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery7.jpeg" target="_blank">
+                    <img src="./images/gallery7.jpeg" alt="Gallery Image 7">
+                    <div class="popup"> </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery8.jpeg" target="_blank">
+                    <img src="./images/gallery8.jpeg" alt="Gallery Image 8">
+                    <div class="popup">Holi Celebration</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery9.jpeg" target="_blank">
+                    <img src="./images/gallery9.jpeg" alt="Gallery Image 9">
+                    <div class="popup">Holi Celebration</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery10.jpeg" target="_blank">
+                    <img src="./images/gallery10.jpeg" alt="Gallery Image 10">
+                    <div class="popup">Poster Presentation</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery11.jpeg" target="_blank">
+                    <img src="./images/gallery11.jpeg" alt="Gallery Image 11">
+                    <div class="popup"></div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery12.jpeg" target="_blank">
+                    <img src="./images/gallery12.jpeg" alt="Gallery Image 12">
+                    <div class="popup">Coffee Break</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery13.jpeg" target="_blank">
+                    <img src="./images/gallery13.jpeg" alt="Gallery Image 13">
+                    <div class="popup"></div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="./images/gallery14.jpeg" target="_blank">
+                    <img src="./images/gallery14.jpeg" alt="Gallery Image 14">
+                    <div class="popup"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <!-- Lab Logo and Tagline -->
+            <div class="footer-logo">
+                <img src="./images/logo.png" alt="Lab Logo" class="lab-logo">
+                <div class="lab-tagline">
+                    <h3>INDRA LAB</h3>
+                    <p>Department of Civil Engineering, IIT Roorkee</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://iitr.ac.in/" target="_blank">IIT Roorkee</a></li>
+                    <li><a href="https://civil.iitr.ac.in/CE?Uid=indrafce" target="_blank">Profile Page</a></li>
+                    <li><a href="https://civil.iitr.ac.in/Default" target="_blank">Civil Dept. IITR</a></li>
+                    <li><a href="https://iitr.ac.in/mfsdsai/" target="_blank">MFSDSAI, IITR</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Room No: 314, Civil Engineering Department, IIT Roorkee</p>
+                <p>Mobile Number: +91 9536932669</p>
+                <p>Contact Email: <a href="mailto:indrafce@iitr.ac.in">indrafce@iitr.ac.in</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
