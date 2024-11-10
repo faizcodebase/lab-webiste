@@ -36,7 +36,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 
 // Optional: Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
@@ -61,4 +61,19 @@ function toggleMobileNav() {
     document.querySelector('.nav-links').classList.toggle('show');
     document.querySelector('.nav-overlay').classList.toggle('show');
 }
+
+
+function toggleFormerStudents() {
+    const formerStudents = document.getElementById('former-students');
+    const button = document.querySelector('.button');
+
+    if (formerStudents.style.display === 'none') {
+        formerStudents.style.display = 'flex';
+        button.textContent = 'Hide Former Members';
+    } else {
+        formerStudents.style.display = 'none';
+        button.textContent = 'Show Former Members';
+    }
+}
+
 
